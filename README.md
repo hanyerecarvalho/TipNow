@@ -1,4 +1,5 @@
 # 🪙 TipNow - Calculadora de Gorjetas
+# Projeto apenas para estudo.
 
 O TipNow é uma aplicação web desenvolvida em PHP, HTML e CSS para facilitar o cálculo de gorjetas e a divisão de contas em restaurantes de forma rápida e prática.
 
