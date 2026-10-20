@@ -1,88 +1,50 @@
-# 🪙 TipNow - Calculadora de Gorjetas
-# Projeto apenas para estudo.
+# TipNow 🪙
 
-O TipNow é uma aplicação web desenvolvida em PHP, HTML e CSS para facilitar o cálculo de gorjetas e a divisão de contas em restaurantes de forma rápida e prática.
+Calculadora de gorjetas e divisão de contas desenvolvida como projeto de estudo com **PHP, Slim Framework, HTML, CSS e Bootstrap**.
 
-O sistema permite que o usuário informe o valor da conta, escolha a porcentagem da gorjeta e defina a quantidade de pessoas para realizar a divisão. A aplicação calcula automaticamente o valor da gorjeta, o total da conta e o valor individual que cada pessoa deverá pagar, evitando erros manuais e tornando o processo mais eficiente.
+## O que faz
 
-## 🚀 Funcionalidades
+- Calcula gorjetas de 5%, 10%, 15% ou 20%.
+- Soma a gorjeta ao valor original da conta.
+- Divide o total pela quantidade de pessoas.
+- Apresenta os resultados em reais.
 
-- Cálculo de gorjeta com porcentagens de 5%, 10%, 15% e 20%;
-- Divisão da conta entre várias pessoas;
-- Cálculo automático do valor total com a gorjeta adicionada;
-- Cálculo do valor individual por pessoa;
-- Interface simples e intuitiva;
-- Validação de valores para evitar entradas inválidas.
+## Exemplo
 
-## 🛠️ Tecnologias Utilizadas
+| Entrada | Valor |
+| --- | --- |
+| Conta | R$ 200,00 |
+| Gorjeta | 10% |
+| Pessoas | 4 |
 
-- PHP 8+
-- HTML5
-- CSS3
-- Bootstrap
-- Slim Framework
-- Composer
+**Resultado:** R$ 20,00 de gorjeta, R$ 220,00 no total e R$ 55,00 por pessoa.
 
-## ▶️ Como Executar o Projeto
+## Executar localmente
 
-Clone o repositório:
+Requisitos: PHP 8.0 ou superior e Composer. O Bootstrap é carregado por CDN e precisa de acesso à internet.
 
+```bash
 git clone https://github.com/hanyerecarvalho/TipNow.git
-
-Acesse a pasta do projeto:
-
-```
 cd TipNow
-```
-
-Instale as dependências:
-
-```
 composer install
-```
-
-Execute o servidor PHP:
-
-```
 php -S localhost:8000 -t public
 ```
 
-Acesse no navegador:
+Abra `http://localhost:8000/index.html`, preencha o formulário e envie os dados. A rota `POST /calculo` é tratada por `public/calculo/index.php`.
 
-http://localhost:8000
+## Organização
 
-## 📊 Exemplo de Uso
-
-Entrada:
-
-Valor da conta: R$ 200,00  
-Gorjeta: 10%  
-Número de pessoas: 4  
-
-Saída:
-
-Gorjeta: R$ 20,00  
-Valor total: R$ 220,00  
-Valor por pessoa: R$ 55,00  
-
-## 📁 Estrutura do Projeto
-
-```
-TipNow/
-├── public/
-│   └── index.php
-├── src/
-│   └── calculo/
-│       └── Calculo.php
-├── vendor/
-├── composer.json
-└── composer.lock
+```text
+public/index.html          Formulário da calculadora
+public/calculo/index.php   Rota POST /calculo e apresentação do resultado
+src/calculo/calculo.php    Classe com as regras de cálculo
+composer.json             Dependências e autoload
 ```
 
-## 📌 Status do Projeto
+## Limitações atuais
 
-Projeto funcional com as principais funcionalidades implementadas. Futuras melhorias incluem aprimoramento das validações dos dados recebidos, tratamento de campos vazios e melhorias na experiência do usuário.
+A classe rejeita divisões com quantidade de pessoas menor ou igual a zero, mas o tratamento dos erros e a validação dos demais valores ainda podem ser aprimorados. O nome do arquivo `calculo.php` difere da capitalização da classe `Calculo`; isso pode afetar o autoload em ambientes sensíveis a maiúsculas e minúsculas.
 
-## 👨‍💻 Autor
+## Autor e licença
 
-Desenvolvido por **Hanyere**
+[Hanyere Carvalho](https://github.com/hanyerecarvalho) · [Licença MIT](LICENSE)
