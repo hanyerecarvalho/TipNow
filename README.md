@@ -41,9 +41,10 @@ src/calculo/calculo.php    Classe com as regras de cálculo
 composer.json             Dependências e autoload
 ```
 
-## Limitações atuais
+## Imagens
+<img width="1919" height="1030" alt="image" src="https://github.com/user-attachments/assets/e7d4f84b-411a-4181-9b6a-a8110a915dfc" />
+<img width="1919" height="1033" alt="image" src="https://github.com/user-attachments/assets/b5727786-9f07-4b8a-b554-4022630aa497" />
 
-A classe rejeita divisões com quantidade de pessoas menor ou igual a zero, mas o tratamento dos erros e a validação dos demais valores ainda podem ser aprimorados. O nome do arquivo `calculo.php` difere da capitalização da classe `Calculo`; isso pode afetar o autoload em ambientes sensíveis a maiúsculas e minúsculas.
 
 ## Autor e licença
 
